@@ -7,30 +7,52 @@ class FizzBuzz {
 
     public static void main(String[] args) {
 
-        for (int i = 1; i <= 100; i++) {
+        // for (int i = 1; i <= 100; i++) {
 
-            // Find out which numbers divide i.
-            boolean divisibleBy3 = i % 3 == 0;
-            boolean divisibleBy5 = i % 5 == 0;
+        //     // Find out which numbers divide i.
+        //     boolean divisibleBy3 = i % 3 == 0;
+        //     boolean divisibleBy5 = i % 5 == 0;
 
-            // Print our appropriate result.
-            if (divisibleBy3 && divisibleBy5) {
+        //     // Print our appropriate result.
+        //     if (divisibleBy3 && divisibleBy5) {
 
-                System.out.println("Fizz Buzz");
+        //         System.out.println("Fizz Buzz");
 
-            } else if (divisibleBy3) {
+        //     } else if (divisibleBy3) {
 
-                System.out.println("Fizz");
+        //         System.out.println("Fizz");
 
-            } else if (divisibleBy5) {
+        //     } else if (divisibleBy5) {
 
-                System.out.println("Buzz");
+        //         System.out.println("Buzz");
 
-            } else {
+        //     } else {
 
-                System.out.println(i);
+        //         System.out.println(i);
 
-            }
+        //     }
+        // }
+        int i = 1;
+        while (i <= 100){
+            i = doFizzBuzz(i);
+
         }
+    }
+
+    private static int doFizzBuzz(int i) {
+        boolean divBy3 = i % 3 == 0;
+        boolean divBy5 = i % 5 == 0;
+
+        if (divBy3 && divBy5) {
+            System.out.println("Fizz Buzz");
+        } else if (divBy3) {
+            System.out.println("Fizz");
+        } else if (divBy5) {
+            System.out.println("Buzz");
+        } else {
+            System.out.println(i);
+        }
+        i += 1;
+        return i;
     }
 }
